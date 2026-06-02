@@ -69,7 +69,8 @@
         clearTimeout(timeoutId);
         timeoutId = setTimeout(async () => {
             try {
-                const res = await fetch(`http://127.0.0.1:8000/mf/search?q=${encodeURIComponent(query)}`);
+                //const res = await fetch(`http://127.0.0.1:8000/mf/search?q=${encodeURIComponent(query)}`);
+                const res = await fetch(`/mf/search?q=${encodeURIComponent(query)}`);
                 const matches = await res.json();
                 
                 suggestionsBox.innerHTML = "";
